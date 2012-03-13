@@ -70,6 +70,9 @@ function pinit(imgSelector/*='img'*/) {
 			s.src = "https://assets.pinterest.com/js/pinit.js";
 		else
 			s.src = "http://assets.pinterest.com/js/pinit.js";
+		s.onload = function() { 
+			$('.mg-container iframe').css({position: 'absolute', right: '2px', top: '2px'});
+		};
 		var x = document.getElementsByTagName("script")[0];
 		x.parentNode.insertBefore(s, x);
 	});

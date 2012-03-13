@@ -39,7 +39,7 @@ pinit('img');
 
 function pinit(imgSelector/*='img'*/) {
 	var
-		pageUrl = 'www.example.com'
+		pageUrl = window.location.href//'http://mgiulio.altervista.org'
 	;
 	
 	$(window).load(function() {
@@ -57,7 +57,12 @@ function pinit(imgSelector/*='img'*/) {
 					'<a  style="position: absolute; right: 2px; top: 2px;"' +
 						'class="pin-it-button" ' +
 						'count-layout="horizontal" ' + // where is the counter?
-						'href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fmgiulio.altervista.org%2F&media=http%3A%2F%2Fmgiulio.altervista.org%2Fwp-content%2Fuploads%2F2012%2F01%2FPlaying-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_.jpg&description=blah%20blah" >' + 
+						'href="http://pinterest.com/pin/create/button/?' + 
+							$.param({url: pageUrl,
+								media: 'http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_.jpg',//img.src,
+								description: img.title
+							}) +
+						'">' + 
 					'Pin It' +
 					'</a>')
 			;

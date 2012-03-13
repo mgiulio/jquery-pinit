@@ -97,16 +97,20 @@ function pinit(imgSelector/*='img'*/) {
 				var g=d[a].split("=");
 				b[g[0]]=g[1]
 			}
+			
 			b.layout=c.getAttribute("count-layout");
 			b.count=c.getAttribute("always-show-count");
-			a="?";d=window.location.protocol+"//d3io1k5o0zdpqr.cloudfront.net/pinit.html";
+			
+			a="?";
+			d = window.location.protocol + "//d3io1k5o0zdpqr.cloudfront.net/pinit.html";
 			for (var f in b)
 				if(b[f]){
 					d += a +f + "=" + b[f];
 					a="&"
 				}
-			a=document.createElement("iframe");
-			a.setAttribute("src",d);
+				
+			a = document.createElement("iframe");
+			a.setAttribute("src", d);
 			a.setAttribute("scrolling","no");
 			a.allowTransparency=true;
 			a.frameBorder=0;
@@ -122,6 +126,7 @@ function pinit(imgSelector/*='img'*/) {
 				a.style.width="90px";
 				a.style.height="20px"
 			}
+			
 			c.parentNode.replaceChild(a,c)
 		}
 	}

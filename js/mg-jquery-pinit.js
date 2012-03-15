@@ -21,10 +21,12 @@ function run() {
 				layout: 'none'
 			}),
 			iframe = $('<iframe></iframe>')
-				.attr('src', iframeUrl + '?' + qs)
-				.attr('scrolling', 'no')
-				.attr('allowtransparency', true)
-				.attr('frameborder', 0)
+				.attr({
+					src: iframeUrl + '?' + qs,
+					scrolling: 'no',
+					allowtransparency: true,
+					frameborder: 0
+				})
 				.css({
 					position: 'absolute',
 					right: '2px',

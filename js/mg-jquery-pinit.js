@@ -34,12 +34,13 @@ function run() {
 					border: 'none',
 					width: '43px',
 					height: '20px'
-				})
+				}),
+			$this = $(this)
 		;
-		$(this)
+		$this
 			.wrap(
 				$('<div class="mg-container" style="position: relative;"></div>')
-					.css({width: $(this).width(), height: $(this).height()})
+					.css({width: $this.width(), height: $this.height()})
 			)
 			.after(iframe)
 		;

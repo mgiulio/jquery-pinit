@@ -16,7 +16,7 @@ function run() {
 			iframeUrl = window.location.protocol + '//d3io1k5o0zdpqr.cloudfront.net/pinit.html'
 			qs = $.param({
 				url: pageUrl,
-				media: 'http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_.jpg',//this.src,
+				media: this.src,
 				description: this.title,
 				layout: 'none'
 			}),

@@ -9,8 +9,6 @@ $.fn.pinit = function() {
 };
 
 function run() {
-	var pageUrl = window.location.href;
-	
 	pics.each(function() {
 		var offset = $(this).offset();
 		$('<a href="#">PinIt</a>')
@@ -23,10 +21,12 @@ function run() {
 			.click(function() {
 				var img = $(this).data('img');
 				window.open(
-					'http://pinterest.com/pin/create/button/?' + $.param({url: pageUrl, media: img.src, description: img.title}), 
+					'http://pinterest.com/pin/create/button/?' + $.param({url: window.location.href, media: img.src, description: img.title}), 
 					'signin', 
 					'width=665,height=300');
+				$(this).remove();
 			})
+			.attr('title', 'Pin it to your Pinterest boards')
 			.appendTo('body')
 		;
 	});

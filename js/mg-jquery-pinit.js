@@ -12,39 +12,55 @@ function run() {
 	var pageUrl = window.location.href;
 	
 	pics.each(function() {
-		var
-			iframeUrl = window.location.protocol + '//d3io1k5o0zdpqr.cloudfront.net/pinit.html'
-			qs = $.param({
-				url: pageUrl,
-				media: this.src,
-				description: this.title,
-				layout: 'none'
-			}),
-			iframe = $('<iframe></iframe>')
-				.attr({
-					src: iframeUrl + '?' + qs,
-					scrolling: 'no',
-					allowtransparency: true,
-					frameborder: 0
-				})
-				.css({
-					position: 'absolute',
-					right: '2px',
-					top: '2px',
-					border: 'none',
-					width: '43px',
-					height: '20px'
-				}),
-			$this = $(this)
-		;
-		$this
-			.wrap(
-				$('<div class="mg-container" style="position: relative;"></div>')
-					.css({width: $this.width(), height: $this.height()})
-			)
-			.after(iframe)
+		var offset = $(this).offset();
+		$('<a href="#">PinIt</a>')
+			.css({//.offset($(this).offset())
+				position: 'absolute',
+				left: offset.left, 
+				top: offset.top 
+			})
+			.data('img', this)
+			.click(function() {
+				var img = $(this).data('img');
+				window.open(
+					'http://pinterest.com/pin/create/button/?' + $.param({url: pageUrl, media: img.src, description: img.title}), 
+					'signin', 
+					'width=665,height=300');
+			})
+			.appendTo('body')
 		;
 	});
 }
 
 })(jQuery);
+
+/*
+function run() {
+	var 
+		pageUrl = window.location.href,
+		pinitBtn = $('<a href="#">PinIt</a>')
+			.css({
+				position: 'absolute',
+			})
+			.click(function() {
+				console.log('About to pin it ...');
+			})
+			.hide()
+			.appendTo('body')
+	;
+	
+	pics
+		.mouseenter(function() {
+			console.log('mouseenter');
+			var o = $(this).offset();
+			pinitBtn
+				.css({left: o.left, top: o.top})
+				//.offset($(this).offset())
+				.show()
+			;
+		})
+		.mouseleave(function() {
+			console.log('mouseleave');
+			pinitBtn.hide();
+		});
+}*/

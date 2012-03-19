@@ -10,11 +10,14 @@ $.fn.pinit = function() {
 
 function run() {
 	pics.each(function() {
-		var offset = $(this).offset();
+		var 
+			offset = $(this).offset(),
+			w = $(this).width()
+		;
 		$('<a href="#">PinIt</a>')
 			.css({//.offset($(this).offset())
 				position: 'absolute',
-				left: offset.left, 
+				left: offset.left + w - 50,//px? 
 				top: offset.top 
 			})
 			.data('img', this)

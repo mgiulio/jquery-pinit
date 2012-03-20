@@ -17,8 +17,24 @@ function run() {
 		$('<a href="#">PinIt</a>')
 			.css({//.offset($(this).offset())
 				position: 'absolute',
-				left: offset.left + w - 50,//px? 
-				top: offset.top 
+				display: 'block',//?
+				width: '50px',
+				height: '20px',
+				padding: '0px',
+				'font-family': 'verdana',
+				'font-style': 'italic',
+				'font-size': '16px',
+				'line-height': '1em',
+				left: offset.left + w - 52,//px? 
+				top: offset.top,
+				'background-color': '#fff',
+				'border-color': '#f0f0f0',
+				'border-width': '1px',
+				'border-style': 'solid',
+				color: '#ff0000',
+				'text-align': 'center',
+				'font-weight': 'bold',
+				'text-decoration': 'none'
 			})
 			.data('img', this)
 			.click(function() {

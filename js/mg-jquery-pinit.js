@@ -18,23 +18,24 @@ function run() {
 			.css({//.offset($(this).offset())
 				position: 'absolute',
 				display: 'block',//?
-				width: '50px',
-				height: '20px',
+				width: '135px',
+				height: '135px',
 				padding: '0px',
-				'font-family': 'verdana',
-				'font-style': 'italic',
-				'font-size': '16px',
-				'line-height': '1em',
-				left: offset.left + w - 52,//px? 
+				//'font-family': 'verdana',
+				//'font-style': 'italic',
+				//'font-size': '16px',
+				//'line-height': '1em',
+				left: offset.left + w - 135,//px? 
 				top: offset.top,
-				'background-color': '#fff',
-				'border-color': '#f0f0f0',
-				'border-width': '1px',
-				'border-style': 'solid',
-				color: '#ff0000',
-				'text-align': 'center',
-				'font-weight': 'bold',
-				'text-decoration': 'none'
+				'background-image': 'url(img/ribbon.png)',
+				//'border-color': '#f0f0f0',
+				//'border-width': '1px',
+				//'border-style': 'solid',
+				//color: '#ff0000',
+				//'text-align': 'center',
+				//'font-weight': 'bold',
+				//'text-decoration': 'none',
+				'text-indent': '-9999px'
 			})
 			.data('img', this)
 			.click(function() {

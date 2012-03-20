@@ -12,39 +12,29 @@ function run() {
 	pics.each(function() {
 		var 
 			offset = $(this).offset(),
-			w = $(this).width()
+			imgW = $(this).width()
 		;
-		$('<a href="#">PinIt</a>')
-			.css({//.offset($(this).offset())
+		
+		$('<a href="#"></a>')
+			.css({
 				position: 'absolute',
-				display: 'block',//?
 				width: '135px',
 				height: '135px',
-				padding: '0px',
-				//'font-family': 'verdana',
-				//'font-style': 'italic',
-				//'font-size': '16px',
-				//'line-height': '1em',
-				left: offset.left + w - 135,//px? 
+				left: offset.left + imgW - 135,
 				top: offset.top,
 				'background-image': 'url(img/ribbon.png)',
-				//'border-color': '#f0f0f0',
-				//'border-width': '1px',
-				//'border-style': 'solid',
-				//color: '#ff0000',
-				//'text-align': 'center',
-				//'font-weight': 'bold',
-				//'text-decoration': 'none',
-				'text-indent': '-9999px'
 			})
 			.data('img', this)
 			.click(function() {
-				var img = $(this).data('img');
+				var 
+					btn = $(this),
+					img = btn.data('img');
 				window.open(
 					'http://pinterest.com/pin/create/button/?' + $.param({url: window.location.href, media: img.src, description: img.title}), 
 					'signin', 
 					'width=665,height=300');
-				$(this).remove();
+				btn.remove();
+				return false;
 			})
 			.attr('title', 'Pin it to your Pinterest boards')
 			.appendTo('body')

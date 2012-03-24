@@ -13,6 +13,8 @@
 	<![endif]-->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 		#demo {
 			list-style: none;
@@ -44,20 +46,20 @@
 <p>Just construct the jQuery object with the images that you want and invoke the .pinit() method.
 For example, to automagically assign a the '<em>Pin It</em>' Button to the above images the following code was used:</p>
 
-<pre>
-	<ul id="demo">
-		<li>
-			<img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" />
-		</li>
-		<li>
-			<img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" />
-		</li>
-	</ul>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="js/mg-jquery-pinit.js"></script>
-	<script>
+<pre class="brush: html">
+	&lt;ul id="demo"&gt;
+		&lt;li&gt;
+			&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" /&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" /&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script src="js/mg-jquery-pinit.js"&gt;&lt;/script&gt;
+	&lt;script&gt;
 	$('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
-	</script>
+	&lt;/script&gt;
 </pre>
 
 <p>If the pinned image has a title attribute it is used for a default pin description.</p>
@@ -83,9 +85,12 @@ For example, to automagically assign a the '<em>Pin It</em>' Button to the above
 	<p>A <em>PrjEx</em> by <a href="http://mgiulio.altervista.org">mgiulio</a></p>
 </footer>
 
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/mg-jquery-pinit.js"></script>
 <script>
+SyntaxHighlighter.all()
 $('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
 </script>
 

@@ -12,19 +12,29 @@
 	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
-		#demo {
+		body {
+			background-color: #f7f7f7;
+		}
+		#demo li {
 			list-style: none;
+			margin-bottom: 20px;
+			text-align: center;
+			
+		}
+		#demo li a img {
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #eee;
 		}
 	</style>
 </head>
 
 <body>
 
-<h1>mg-jquery-pinit: a jQuery Pinterest plugin to automagically create Pin It buttons for your images</h1>
+<h1>mg-jquery-pinit: a jQuery Pinterest plugin to <em>automagically</em> create Pin It buttons for your images</h1>
 
 <h2>About</h2>
 
@@ -33,12 +43,13 @@
 <h2>Live Demo</h2>
 
 <ul id="demo">
-	<li>
-		<img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" />
-	</li>
-	<li>
-		<img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" />
-	</li>
+	<li><a href="http://www.flickr.com/photos/dalaka/61803030/" title="Pomegranate by dalaka, on Flickr"><img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" alt="Pomegranate"></a></li>
+	<li><a href="http://www.flickr.com/photos/krimsong/3137244461/" title="Pomegranate by Krimos, on Flickr"><img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339" alt="Pomegranate"></a></li>
+	<li><a href="http://www.flickr.com/photos/petunia21/1810881478/" title="Pomegranates by Petunia21, on Flickr"><img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" alt="Pomegranates"></a></li>
+	<li><a href="http://www.flickr.com/photos/anton017/6782974205/" title="Pomegranate by Anton Cruz, on Flickr"><img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" alt="Pomegranate"></a></li>
+	<li><a href="http://www.flickr.com/photos/cbder/3020421960/" title="Chocolate-Pomegranate Torte by cbder, on Flickr"><img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" alt="Chocolate-Pomegranate Torte"></a></li>
+	<li><a href="http://www.flickr.com/photos/deadcenter/157225218/" title="Pomegranates by deadcenter, on Flickr"><img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" alt="Pomegranates"></a></li>
+	<li><a href="http://www.flickr.com/photos/31241172@N08/3304886496/" title="pomegranate by SteenT, on Flickr"><img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" alt="pomegranate"></a></li>
 </ul>
 
 <h2>Usage</h2>
@@ -75,6 +86,8 @@ For example, to automagically assign a the '<em>Pin It</em>' Button to the above
 <h2>License and Disclaimer</h2>
 
 <h2>Download</h2>
+
+<a href="#">TODO</a>
 
 <h2>Issues</h2>
 <p>Any <a href="http://mgiulio.altervista.org/contact/" title="Contact">report of issues and suggestions</a> are welcomed.</p>

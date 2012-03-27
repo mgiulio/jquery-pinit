@@ -2,31 +2,41 @@
 
 var 
 	pics,
-	cfg
+	btnImgUrl,
+	btnImgWidth,
+	btnImgHeight
 ;
 
-$.fn.pinit = function(_cfg) {
+$.fn.pinit = function(cfg) {
 	pics = this;
-	cfg = _cfg;
-	$(window).load(run);
+	
+	btnImgUrl = cfg.btnImgUrl;
+	var img = new Image();
+	img.onload = function() { 
+		btnImgWidth = this.width;
+		btnImgHeight = this.height;
+		$(window).load(run); 
+	};
+	img.src = btnImgUrl;
+	
 	return this;
 };
 
 function run() {
 	pics.each(function() {
 		var 
-			offset = $(this).offset(),
-			imgW = $(this).width()
+			img = $(this),
+			offset = img.offset()
 		;
-		
+			
 		$('<a href="#"></a>')
 			.css({
 				position: 'absolute',
-				width: '135px',
-				height: '135px',
-				left: offset.left + imgW - 135,
-				top: offset.top,
-				'background-image': 'url(' + cfg.btnImgUrl + ')',
+				width: btnImgWidth + 'px',
+				height: btnImgHeight + 'px',
+				left: offset.left + parseInt(img.css('border-left-width')) + parseInt(img.css('padding-left')) + img.width() - btnImgWidth,
+				top: offset.top + parseInt($(this).css('border-top-width')) + parseInt($(this).css('padding-top')),
+				'background-image': 'url(' + btnImgUrl + ')',
 				outline: 'none'
 			})
 			.data('img', this)

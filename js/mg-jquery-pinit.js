@@ -11,7 +11,7 @@ $.fn.pinit = function(cfg) {
 			btnImgWidth = this.width;
 			btnImgHeight = this.height;
 			$(window).load(function() {
-				pics.each(function() {
+				pics.filter('img').each(function() {
 					var 
 						img = $(this),
 						offset = img.offset()

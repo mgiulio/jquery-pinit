@@ -22,6 +22,7 @@ $.fn.pinit = function(cfg) {
 					$('<a href="#"></a>')
 						.css({
 							position: 'absolute',
+							'z-index': parseInt(img.css('z-index')) !== NaN ? parseInt(img.css('z-index')) + 1 : auto,
 							width: btnImgWidth + 'px',
 							height: btnImgHeight + 'px',
 							left: offset.left + parseInt(img.css('border-left-width')) + parseInt(img.css('padding-left')) + img.width() - btnImgWidth,

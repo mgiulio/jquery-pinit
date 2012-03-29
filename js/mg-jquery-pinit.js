@@ -1,4 +1,8 @@
-(function($){
+(function($) {
+var 
+	//tmp,
+	maxZindex = 9999
+;
 $.fn.pinit = function(cfg) {
 	(function(pics, cfg) {
 			var 
@@ -22,7 +26,7 @@ $.fn.pinit = function(cfg) {
 					$('<a href="#"></a>')
 						.css({
 							position: 'absolute',
-							'z-index': parseInt(img.css('z-index')) !== NaN ? parseInt(img.css('z-index')) + 1 : auto,
+							'z-index': maxZindex, //(tmp = parseInt(img.css('z-index'))) !== NaN ? tmp + 1 : 'auto',
 							width: btnImgWidth + 'px',
 							height: btnImgHeight + 'px',
 							left: offset.left + parseInt(img.css('border-left-width')) + parseInt(img.css('padding-left')) + img.width() - btnImgWidth,

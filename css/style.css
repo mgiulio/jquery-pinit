@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+body {
+	background: #f7f7f7 url(../img/100-90-5.png);
+}
+#page-wrap {
+	width: 600px;
+	margin: 0 auto;
+}
+header h1 {
+	text-indent: -9999px;
+	width: 335px;
+	height: 80px;
+	margin: 20px auto;
+	background: url(../img/logo.png) no-repeat 0 0;
+}
+header h2 {
+	font-family: 'Lobster', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	text-align: center;
+	color: #d40000;
+	margin: 0;
+}
+h2 {
+	margin-top: 80px;
+	margin-bottom: 30px;
+	color: #fe4901;
+	text-align: center;
+	font-family: Georgia;
+	font-size: 20px;
+	font-style: bold;
+}
+p {
+	color: #666;
+	font-family: Cambria, serif;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.5em;
+	text-align: justify;
+}
+ul {
+	color: #666;
+	font-family: Cambria, serif;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.5em;
+}
+#demo li {
+	list-style: none;
+	margin-bottom: 20px;
+	text-align: center;
+	
+}
+#demo li a img {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+footer {
+	text-align: center;
+	width: 331px;
+	height: 102px;
+	margin: 20px auto;
+	background: url(../img/footer.png) no-repeat 0 0;
+	color: #4d4d4d;
+	font-family: 'Lobster', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	padding-top: 40px;
+}
+footer img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}

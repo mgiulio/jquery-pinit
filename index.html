@@ -11,100 +11,90 @@
 	<!--[if lt IE 9]>
 	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-		body {
-			background-color: #f7f7f7;
-		}
-		#demo li {
-			list-style: none;
-			margin-bottom: 20px;
-			text-align: center;
-			
-		}
-		#demo li a img {
-			padding: 10px;
-			background-color: #fff;
-			border: 1px solid #eee;
-		}
-	</style>
 </head>
 
 <body>
+<div id="page-wrap">
+	<header>
+		<h1>jQuery Pinit</h1>
+		<h2> a jQuery Pinterest plugin to <em>automagically</em> overlay 'Pin It!' buttons on your images</h2>
+	</header>
 
-<h1>mg-jquery-pinit: a jQuery Pinterest plugin to <em>automagically</em> create Pin It buttons for your images</h1>
+	<h2>Demo</h2>
+	<ul id="demo">
+		<li><a href="http://www.flickr.com/photos/dalaka/61803030/" title="Pomegranate by dalaka, on Flickr"><img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" alt="Pomegranate"></a></li>
+		<li><a href="http://www.flickr.com/photos/krimsong/3137244461/" title="Pomegranate by Krimos, on Flickr"><img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339" alt="Pomegranate"></a></li>
+		<li><a href="http://www.flickr.com/photos/petunia21/1810881478/" title="Pomegranates by Petunia21, on Flickr"><img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" alt="Pomegranates"></a></li>
+		<li><a href="http://www.flickr.com/photos/anton017/6782974205/" title="Pomegranate by Anton Cruz, on Flickr"><img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" alt="Pomegranate"></a></li>
+		<li><a href="http://www.flickr.com/photos/cbder/3020421960/" title="Chocolate-Pomegranate Torte by cbder, on Flickr"><img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" alt="Chocolate-Pomegranate Torte"></a></li>
+		<li><a href="http://www.flickr.com/photos/deadcenter/157225218/" title="Pomegranates by deadcenter, on Flickr"><img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" alt="Pomegranates"></a></li>
+		<li><a href="http://www.flickr.com/photos/31241172@N08/3304886496/" title="pomegranate by SteenT, on Flickr"><img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" alt="pomegranate"></a></li>
+	</ul>
 
-<h2>About</h2>
+	<h2>Usage</h2>
+	<p>Just construct the jQuery object with the images that you want and invoke the .pinit() method.
+	For example, to automagically assign a the '<em>Pin It</em>' Button to the above images the following code 
+	was used:</p>
+	<pre class="brush: html">
+		&lt;ul id="demo"&gt;
+			&lt;li&gt;
+				&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" /&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" /&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+		&lt;script src="js/mg-jquery-pinit.js"&gt;&lt;/script&gt;
+		&lt;script&gt;
+		$('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
+		&lt;/script&gt;
+	</pre>
+	<p>If the pinned image has a title attribute it is used for a default pin description.</p>
 
-<p>A jQuery plugin to overlay a '<em>Pin It</em>' ribbon to a set of images on a page.</p>
+	<h2>Requirements</h2>
+	<ul>
+		<li>All modern browsers</li>
+		<li>Internet Explorer >= 8</li>
+		<li>jQuery >= 1.2.3</li>
+	</ul>
 
-<h2>Live Demo</h2>
+	<h2>License and Disclaimer</h2>
 
-<ul id="demo">
-	<li><a href="http://www.flickr.com/photos/dalaka/61803030/" title="Pomegranate by dalaka, on Flickr"><img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" alt="Pomegranate"></a></li>
-	<li><a href="http://www.flickr.com/photos/krimsong/3137244461/" title="Pomegranate by Krimos, on Flickr"><img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339" alt="Pomegranate"></a></li>
-	<li><a href="http://www.flickr.com/photos/petunia21/1810881478/" title="Pomegranates by Petunia21, on Flickr"><img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" alt="Pomegranates"></a></li>
-	<li><a href="http://www.flickr.com/photos/anton017/6782974205/" title="Pomegranate by Anton Cruz, on Flickr"><img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" alt="Pomegranate"></a></li>
-	<li><a href="http://www.flickr.com/photos/cbder/3020421960/" title="Chocolate-Pomegranate Torte by cbder, on Flickr"><img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" alt="Chocolate-Pomegranate Torte"></a></li>
-	<li><a href="http://www.flickr.com/photos/deadcenter/157225218/" title="Pomegranates by deadcenter, on Flickr"><img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" alt="Pomegranates"></a></li>
-	<li><a href="http://www.flickr.com/photos/31241172@N08/3304886496/" title="pomegranate by SteenT, on Flickr"><img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" alt="pomegranate"></a></li>
-</ul>
+	<h2>Download</h2>
 
-<h2>Usage</h2>
+	<a href="#">TODO</a>
 
-<p>Just construct the jQuery object with the images that you want and invoke the .pinit() method.
-For example, to automagically assign a the '<em>Pin It</em>' Button to the above images the following code was used:</p>
+	<h2>Support</h2>
+	<p>Any <a href="http://mgiulio.altervista.org/contact/" title="Contact">report of issues and suggestions</a> are welcomed.</p>
+	
+	<h2>Source Code<h2>
+	<p>Blah blah Blah blah</p>
 
-<pre class="brush: html">
-	&lt;ul id="demo"&gt;
-		&lt;li&gt;
-			&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" /&gt;
-		&lt;/li&gt;
-		&lt;li&gt;
-			&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" /&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
-	&lt;script src="js/mg-jquery-pinit.js"&gt;&lt;/script&gt;
-	&lt;script&gt;
-	$('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
-	&lt;/script&gt;
-</pre>
+	<h2>Submit Your Button</h2>
+	<p>Blah blah Blah blah</p>
+	
+	<h2>Credits</h2>
+	<p>Blah blah Blah blah</p>
 
-<p>If the pinned image has a title attribute it is used for a default pin description.</p>
-
-<h2>Requirements</h2>
-
-<ul>
-	<li>All modern browsers</li>
-	<li>Internet Explorer >= 8</li>
-	<li>jQuery >= 1.2.3</li>
-</ul>
-
-<h2>License and Disclaimer</h2>
-
-<h2>Download</h2>
-
-<a href="#">TODO</a>
-
-<h2>Issues</h2>
-<p>Any <a href="http://mgiulio.altervista.org/contact/" title="Contact">report of issues and suggestions</a> are welcomed.</p>
-
-<h2>Credits</h2>
-
-<footer>
-	<p>A <em>PrjEx</em> by <a href="http://mgiulio.altervista.org">mgiulio</a></p>
-</footer>
+	<footer>
+		A Project by <a href="http://mgiulio.altervista.org">mgiulio</a>
+		<a href="http://github.com/mgiulio"><img src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+	</footer>
+</div>
 
 <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
 <script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/mg-jquery-pinit.js"></script>
 <script>
-SyntaxHighlighter.all()
-$('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
+	SyntaxHighlighter.all()
+	$('ul#demo li:even img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
+	$('ul#demo li:odd img').pinit({btnImgUrl: 'img/ribbon-white-on-blue.png'});
 </script>
 
 </body>

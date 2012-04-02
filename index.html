@@ -26,35 +26,40 @@
 
 	<h2>Demo</h2>
 	<ul id="demo">
-		<li><a href="http://www.flickr.com/photos/dalaka/61803030/" title="Pomegranate by dalaka, on Flickr"><img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" alt="Pomegranate"></a></li>
-		<li><a href="http://www.flickr.com/photos/krimsong/3137244461/" title="Pomegranate by Krimos, on Flickr"><img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339" alt="Pomegranate"></a></li>
-		<li><a href="http://www.flickr.com/photos/petunia21/1810881478/" title="Pomegranates by Petunia21, on Flickr"><img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" alt="Pomegranates"></a></li>
-		<li><a href="http://www.flickr.com/photos/anton017/6782974205/" title="Pomegranate by Anton Cruz, on Flickr"><img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" alt="Pomegranate"></a></li>
-		<li><a href="http://www.flickr.com/photos/cbder/3020421960/" title="Chocolate-Pomegranate Torte by cbder, on Flickr"><img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" alt="Chocolate-Pomegranate Torte"></a></li>
-		<li><a href="http://www.flickr.com/photos/deadcenter/157225218/" title="Pomegranates by deadcenter, on Flickr"><img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" alt="Pomegranates"></a></li>
-		<li><a href="http://www.flickr.com/photos/31241172@N08/3304886496/" title="pomegranate by SteenT, on Flickr"><img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" alt="pomegranate"></a></li>
+		<li><a href="http://www.flickr.com/photos/dalaka/61803030/"><img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" title="Pomegranate by dalaka, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/krimsong/3137244461/"><img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339"  title="Pomegranate by Krimos, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/petunia21/1810881478/"><img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" title="Pomegranates by Petunia21, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/anton017/6782974205/"><img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" title="Pomegranate by Anton Cruz, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/cbder/3020421960/"><img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" title="Chocolate-Pomegranate Torte by cbder, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/deadcenter/157225218/"><img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" title="Pomegranates by deadcenter, on Flickr"></a></li>
+		<li><a href="http://www.flickr.com/photos/31241172@N08/3304886496/"><img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" title="pomegranate by SteenT, on Flickr"></a></li>
 	</ul>
 
 	<h2>Usage</h2>
-	<p>Just construct the jQuery object with the images that you want and invoke the .pinit() method.
-	For example, to automagically assign a the '<em>Pin It</em>' Button to the above images the following code 
+	<p>Just construct the jQuery object with the images that you want and invoke the .pinit() method on it with 
+	a <code>btnImgUrl</code> parameter to specify the Url of the <a href="#">button graphics</a>.
+	The root of a relative url is the directory of the <code>HTML</code> page that include the jQuery Pinit script.</p>
+	<p>For example, to automagically assign the '<em>Pin It</em>' Button to the above images the following code 
 	was used:</p>
 	<pre class="brush: html">
 		&lt;ul id="demo"&gt;
-			&lt;li&gt;
-				&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2011/03/pieces-of-me-300x225.jpg" alt="" title="pieces-of-me" width="300" height="225" class="aligncenter size-medium wp-image-416" /&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;img src="http://mgiulio.altervista.org/wp-content/uploads/2012/01/Playing-with-Open-Data-a-simple-viewer-for-DecoroUrbano.org_-300x139.jpg" alt="" title="Playing with Open Data- a simple viewer for DecoroUrbano.org" width="300" height="139" class="aligncenter size-medium wp-image-661" /&gt;
-			&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/dalaka/61803030/" title="Pomegranate by dalaka, on Flickr"&gt;&lt;img src="http://farm1.staticflickr.com/31/61803030_4d6d0c6536.jpg" width="500" height="375" alt="Pomegranate"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/krimsong/3137244461/" title="Pomegranate by Krimos, on Flickr"&gt;&lt;img src="http://farm4.staticflickr.com/3179/3137244461_c2c2d9b65b.jpg" width="500" height="339" alt="Pomegranate"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/petunia21/1810881478/" title="Pomegranates by Petunia21, on Flickr"&gt;&lt;img src="http://farm3.staticflickr.com/2036/1810881478_3e98226103.jpg" width="500" height="281" alt="Pomegranates"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/anton017/6782974205/" title="Pomegranate by Anton Cruz, on Flickr"&gt;&lt;img src="http://farm8.staticflickr.com/7157/6782974205_8cf3fb496a.jpg" width="500" height="325" alt="Pomegranate"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/cbder/3020421960/" title="Chocolate-Pomegranate Torte by cbder, on Flickr"&gt;&lt;img src="http://farm4.staticflickr.com/3230/3020421960_e9f0ebcffd.jpg" width="500" height="375" alt="Chocolate-Pomegranate Torte"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/deadcenter/157225218/" title="Pomegranates by deadcenter, on Flickr"&gt;&lt;img src="http://farm1.staticflickr.com/76/157225218_af40b823a3.jpg" width="500" height="375" alt="Pomegranates"&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://www.flickr.com/photos/31241172@N08/3304886496/" title="pomegranate by SteenT, on Flickr"&gt;&lt;img src="http://farm4.staticflickr.com/3478/3304886496_7f14b1335c.jpg" width="500" height="494" alt="pomegranate"&gt;&lt;/a&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 		&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
 		&lt;script src="js/mg-jquery-pinit.js"&gt;&lt;/script&gt;
 		&lt;script&gt;
-		$('ul img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
+			$('ul#demo li:even img').pinit({btnImgUrl: 'img/ribbon-red-on-white.png'});
+			$('ul#demo li:odd img').pinit({btnImgUrl: 'img/ribbon-white-on-blue.png'});
 		&lt;/script&gt;
 	</pre>
-	<p>If the pinned image has a title attribute it is used for a default pin description.</p>
+	<p>If the pinned image has a <code>title</code> or an <code>alt</code> attribute they are used 
+	for a default pin description(The <code>title</code> has precedence over the <code>alt</code>).</p>
 
 	<h2>Requirements</h2>
 	<ul>

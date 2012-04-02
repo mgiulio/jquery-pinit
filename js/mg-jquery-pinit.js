@@ -38,9 +38,11 @@ $.fn.pinit = function(cfg) {
 						.click(function() {
 							var 
 								btn = $(this),
-								img = btn.data('img');
+								img = btn.data('img'),
+								title = img.title || img.alt || ''
+							;
 							window.open(
-								'http://pinterest.com/pin/create/button/?' + $.param({url: window.location.href, media: img.src, description: img.title}), 
+								'http://pinterest.com/pin/create/button/?' + $.param({url: window.location.href, media: img.src, description: title}), 
 								'signin', 
 								'width=665,height=300');
 							btn.remove();

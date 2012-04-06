@@ -3,8 +3,9 @@ body {
 	background: #f7f7f7 url(../img/100-90-5.png);
 }
 #page-wrap {
-	width: 600px;
+	width: 59.58291956305859%; /* 600 / 1007 px */
 	margin: 0 auto;
+	outline: 1px solid #000;
 }
 header h1 {
 	text-indent: -9999px;

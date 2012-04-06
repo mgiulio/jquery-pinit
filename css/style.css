@@ -30,7 +30,7 @@ h2 {
 	font-size: 20px;
 	font-style: bold;
 }
-p {
+p, ul {
 	color: #666;
 	font-family: Cambria, serif;
 	font-size: 16px;
@@ -41,21 +41,14 @@ p {
 	line-height: 1.5em;
 	text-align: justify;
 }
-ul {
-	color: #666;
-	font-family: Cambria, serif;
-	font-size: 16px;
-	font-style: italic;
-	font-weight: normal;
-	text-transform: normal;
-	letter-spacing: normal;
-	line-height: 1.5em;
+ul#demo {
+	margin: 0;
+	padding: 0;
 }
 #demo li {
 	list-style: none;
 	margin-bottom: 20px;
 	text-align: center;
-	
 }
 #demo li a img {
 	padding: 10px;

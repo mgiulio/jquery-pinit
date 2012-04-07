@@ -3,9 +3,8 @@ body {
 	background: #f7f7f7 url(../img/100-90-5.png);
 }
 #page-wrap {
-	width: 59.58291956305859%; /* 600 / 1007 px */
+	width: 59.58291956305859%; /* 600/1007 px */
 	margin: 0 auto;
-	outline: 1px solid #000;
 }
 header h1 {
 	text-indent: -9999px;
@@ -45,16 +44,17 @@ p, ul {
 ul#demo {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 #demo li {
-	list-style: none;
-	margin-bottom: 20px;
-	text-align: center;
-}
-#demo li a img {
+	width: 83.33333333333334%; /* 500/600 px */
+	margin: 0 auto 20px;
 	padding: 10px;
 	background-color: #fff;
 	border: 1px solid #ddd;
+}
+#demo li a img {
+	width: 100%;
 }
 code {
 	font-family: monospace;

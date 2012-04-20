@@ -1,20 +1,20 @@
 (function($) {
+
 var 
-	//tmp,
 	maxZindex = 9999
 ;
+
 $.fn.pinit = function(cfg) {
-	(function(pics, cfg) {
-			var 
-			btnImgUrl = cfg.btnImgUrl,
-			btnImgWidth,
-			btnImgHeight,
-			img = new Image()
-		;
+		var img = new Image();
+		cfg.pics = this;
 		img.onload = function() { 
-			btnImgWidth = this.width;
-			btnImgHeight = this.height;
-			pics.filter('img').each(function() {
+			var
+				btnImgUrl = cfg.btnImgUrl,
+				btnImgWidth = this.width,
+				btnImgHeight = this.height
+			;
+			
+			cfg.pics.filter('img').each(function() {
 				var 
 					img = $(this),
 					offset = img.offset()
@@ -55,10 +55,9 @@ $.fn.pinit = function(cfg) {
 			});
 		};
 		
-		img.src = btnImgUrl;
-		
-	})(this, cfg);
+		img.src = cfg.btnImgUrl;
 	
 	return this;
 };
+
 })(jQuery);
